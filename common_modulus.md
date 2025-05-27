@@ -1,8 +1,8 @@
-# Common Modulus RSA Challenge Write-Up
-# By: Monish Polimetla
-**Category:** Cryptography  
+# Common Modulus RSA Challenge Write-Up  
+**By:** Monish Polimetla  
+**Category:** Cryptography 
 **Difficulty:** Hard  
-**Challenge Type:** CTF Challenge made by Me 
+**Challenge Type:** CTF Challenge I Created  
 
 ## Description
 
