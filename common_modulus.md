@@ -19,6 +19,7 @@ c1 = 234705414043631498537534835227002530396148104068884212444327470266751366758
 
 c2 = 2178262107624777158060385597052879061296806153689812343465475258743937844705362120650432412457464710755607739176396601116993924171708148376763540362154934984739964359569973879695223314243570363043700152290806419111683523011028631612219776620747387752498174976628343143761871355351865963911553441657362980256
 
+
 ---
 
 ## Goal
@@ -29,20 +30,17 @@ Recover the plaintext from the ciphertexts using RSA's vulnerability when the sa
 
 ## Solution
 
-This uses the **Common Modulus Attack**, which applies when the same `n` is used with two coprime exponents. Here's the solution flow:
+This uses the **Common Modulus Attack**, which applies when the same `n` is used with two coprime exponents.
 
-1. Use the **Extended Euclidean Algorithm (EGCD)** to compute integers `a` and `b` such that: a * e1 + b * e2 = 1
+Steps:
+1. Use the **Extended Euclidean Algorithm (EGCD)** to compute integers `a` and `b` such that:  
+   `a * e1 + b * e2 = 1`
 
+2. Compute the message:  
+   `m = (c1^a * c2^b) % n`
 
+3. If `a` or `b` is negative, use modular inverses.
 
-2. Then compute: m = (c1^a * c2^b) % n
-
-
-  
-3. If `a` or `b` is negative, use modular inverses: m = (inverse(c1, n)^(-a) * c2^b) % n
-
-
-   
 ---
 
 ## Analysis
@@ -77,6 +75,7 @@ else:
 
 m = (c1 * c2) % n
 print(long_to_bytes(m))
+
 
 
 ##Flag
