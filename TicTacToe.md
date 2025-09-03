@@ -32,20 +32,20 @@ From the instructions on the challenge page:
 - The model must return a single integer from `0` to `8`, indicating your move.
 
 Behind the scenes, the application does the following:
-- Uploads the `.joblib` file
-- Loads the model using `joblib.load()`
-- Plays a full game turn-by-turn
-- Displays the game result or model errors on the page
+
+- Uploads the `.joblib` file  
+- Loads the model using `joblib.load()`  
+- Plays a full game turn-by-turn  
+- Displays the game result or model errors on the page  
 
 ---
 
 ## Code Behavior
 
-From the source code in `app.py`, the vulnerable line is:
+From the source code in `app.py`, the critical vulnerability is here:
 
 ```python
 user_model = joblib.load(path)
-
 
 ## Payload Construction
 
