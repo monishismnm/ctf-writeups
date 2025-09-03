@@ -45,6 +45,7 @@ From the source code in `app.py`, the vulnerable line is:
 
 ```python
 user_model = joblib.load(path)
+<img width="1643" height="660" alt="Screenshot 2025-07-20 161933" src="https://github.com/user-attachments/assets/8d69d326-a59d-4785-9a70-6d6ea96c8e64" />
 
 
 ## Payload Construction
