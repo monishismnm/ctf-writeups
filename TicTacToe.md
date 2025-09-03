@@ -47,6 +47,7 @@ From the source code in `app.py`, the critical vulnerability is here:
 ```python
 user_model = joblib.load(path)
 
+```
 ## Payload Construction
 
 ### Step 1: Create the Malicious Class
